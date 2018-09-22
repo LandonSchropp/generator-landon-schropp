@@ -12,6 +12,12 @@
     "yeoman-generator"
   ],
   "dependencies": {
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.6.0",
+    "eslint-config-optimum-energy": "^0.4.0",
     "yeoman-generator": "^3.1.1"
+  },
+  "scripts": {
+    "lint": "eslint --max-warnings=0 ."
   }
 }
