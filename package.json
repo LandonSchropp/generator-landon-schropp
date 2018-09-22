@@ -8,5 +8,10 @@
   "files": [
     "generators"
   ],
-  "keywords": ["yeoman-generator"]
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^3.1.1"
+  }
 }
