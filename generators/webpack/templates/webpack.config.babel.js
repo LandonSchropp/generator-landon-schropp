@@ -2,7 +2,7 @@ import path from 'path';
 
 export default {
   devtool: 'source-map',
-  mode: process.env.NODE_ENV || 'development',
+  mode: process.env.NODE_ENV,
   context: path.resolve(__dirname, 'source/javascript'),
   entry: './index.js',
   output: {
