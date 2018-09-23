@@ -1,0 +1,12 @@
+- [x] Create a `.gitignore` generator.
+- [x] Create a `package.json` generator.
+- [x] Create an ESLint generator.
+- [x] Create a Babel generator.
+- [x] Create a Webpack generator.
+- [ ] Create a Gulp generator.
+- [ ] Create a Jest generator.
+- [x] Create a composed static generator.
+- [ ] Create a composed Node.js generator.
+- [ ] Deploy the package to NPM.
+- [ ] Add detailed documentation on all of the generators.
+- [ ] Update documentation to use package instead of GitHub repository.
