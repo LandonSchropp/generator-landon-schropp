@@ -8,6 +8,8 @@
 - [x] Create a composed static generator.
 - [ ] Create a composed Node.js generator.
 - [ ] Move `.gitignore` commands into individual generators.
+- [ ] Break up the Gulp generator.
 - [ ] Deploy the package to NPM.
 - [ ] Add detailed documentation on all of the generators.
 - [ ] Update documentation to use package instead of GitHub repository.
+- [ ] Add layouts to pages
