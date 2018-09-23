@@ -8,5 +8,6 @@ module.exports = class StaticGenerator extends Generator {
     this.composeWith(require.resolve('../eslint'));
     this.composeWith(require.resolve('../babel'));
     this.composeWith(require.resolve('../webpack'));
+    this.composeWith(require.resolve('../gulp'));
   }
 };
