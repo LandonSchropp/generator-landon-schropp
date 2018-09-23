@@ -18,7 +18,7 @@ module.exports = class ESLintGenerator extends Generator {
       "eslint",
       "eslint-config-optimum-energy",
       "babel-eslint"
-    ]);
+    ], { dev: true });
   }
 
   writing() {
@@ -31,6 +31,11 @@ module.exports = class ESLintGenerator extends Generator {
     this.fs.copy(
       this.templatePath('eslintignore'),
       this.destinationPath('.eslintignore')
+    );
+
+    this.fs.extendJSON(
+      this.destinationPath('package.json'),
+      { scripts: { "lint": "eslint --max-warnings=0 ." } }
     );
   }
 };
