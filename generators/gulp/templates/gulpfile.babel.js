@@ -96,7 +96,7 @@ gulp.task('build', gulp.series(
 
 gulp.task('watch', gulp.series('build', () => {
   gulp.watch(COPY_GLOBS, gulp.series('copy'));
-  gulp.watch('source/', gulp.series('html'));
+  gulp.watch('source/pages/**', gulp.series('html'));
   gulp.watch('source/stylesheets/**', gulp.series('stylesheets'));
   gulp.watch('source/javascript/**', gulp.series('javascript'));
   gulp.watch('source/images/**', gulp.series('images'));
