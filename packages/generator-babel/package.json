@@ -12,5 +12,8 @@
   "files": [
     "app"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Landon Schropp <schroppl@gmail.com>"
 }
