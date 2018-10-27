@@ -1,6 +1,5 @@
 module.exports = {
-  parser: "babel-eslint",
-  extends: "optimum-energy",
+  extends: "@landonschropp",
   env: {
     node: true
   },

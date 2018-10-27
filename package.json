@@ -12,11 +12,13 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "babel-eslint": "^9.0.0",
-    "eslint": "^5.6.0",
-    "eslint-config-optimum-energy": "^0.4.0",
     "lodash": "^4.17.11",
     "yeoman-generator": "^3.1.1"
+  },
+  "devDependencies": {
+    "@landonschropp/eslint-config": "^0.4.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.6.0"
   },
   "scripts": {
     "lint": "eslint --max-warnings=0 ."
