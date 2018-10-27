@@ -1,0 +1,17 @@
+{
+  "name": "@landonschropp/generator-babel",
+  "version": "0.0.0",
+  "homepage": "https://github.com/LandonSchropp/yeoman-generators",
+  "repository": "http://github.com/LandonSchropp/yeoman-generators",
+  "description": "My personal Yeoman Babel generator",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "files": [
+    "app"
+  ],
+  "author": "Landon Schropp <schroppl@gmail.com>",
+  "license": "MIT"
+}

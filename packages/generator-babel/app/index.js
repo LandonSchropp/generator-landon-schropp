@@ -16,7 +16,7 @@ module.exports = class BabelGenerator extends Generator {
 
   writing() {
     this.fs.copy(
-      this.templatePath('babelrc'),
+      this.templatePath('.babelrc'),
       this.destinationPath('.babelrc')
     );
   }

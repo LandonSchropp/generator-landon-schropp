@@ -1,13 +1,10 @@
 {
-  "name": "generator-landon-schropp",
+  "name": "@landonschropp/yeoman-generators",
   "description": "A collection of Yeoman generators tailed for Node.js and browser development.",
-  "repository": "http://github.com/LandonSchropp/generator-landon-schropp",
+  "repository": "http://github.com/LandonSchropp/yeoman-generators",
   "author": "Landon Schropp <schroppl@gmail.com>",
   "license": "MIT",
   "private": false,
-  "files": [
-    "generators"
-  ],
   "keywords": [
     "yeoman-generator"
   ],
