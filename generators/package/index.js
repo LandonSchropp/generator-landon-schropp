@@ -62,4 +62,8 @@ module.exports = class PackageGenerator extends Generator {
       this.packageConfiguration
     );
   }
+
+  install() {
+    this.yarnInstall();
+  }
 };
