@@ -11,3 +11,5 @@
 - [ ] Add detailed documentation on all of the generators.
 - [ ] Update documentation to use package instead of GitHub repository.
 - [ ] Add layouts to pages
+- [ ] Add readmes for individual packages
+- [ ] Figure out how to share dependencies for Lerna packages
