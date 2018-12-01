@@ -5,66 +5,81 @@ easy and enjoyable.
 
 ## Quick Start
 
-Create a directory for your project and change into it.
+Run the generator of your choice with [NPX](https://github.com/zkat/npx). NPX allows you to run the
+generator once without having to install anything. Answer the generator's prompts, and you're done!
 
 ``` sh
-mkdir example
-cd example
-```
-
-Next, initialize the directory as a git repository.
-
-```
-git init
-```
-
-Run the generator with [NPX](https://github.com/zkat/npx). This allows you to run the
-generator once without having to install anything. Answer all the prompts, and you're done!
-
-``` sh
-npx -p yo -p https://github.com/LandonSchropp/generator-landon-schropp yo landon-schropp:static
-```
-
-Finally, add all of your files and commit them.
-
-``` sh
-git add .
-git commit -m "Generate a static site build environment"
+npx @landonschropp/<generator>
 ```
 
 That's it! You're ready to start working on your static site.
 
-## Running the Generators
+## The Generators
 
 This project ships with several generators. If you'd like, these generators can all
 
-* `gitignore`: Generates a project `.gitignore` file.
-* `package`: Creates a clean `package.json` file.
-* `eslint`: Adds ESLint along with a preconfigured
-* `babel`: Adds support for Babel.
-* `webpack`: Configures Webpack to compile a source JavaScript file using Babel.
-* `static`: Sets up a static site development environment.
+* [generator-eslint](generator-eslint): Adds my personal ESLint configuration to a project.
+* [generator-babel](generator-babel): Adds support for Babel along with my standard settings.
+* [generator-webpack](generator-webpack): Configures Webpack to compile a source JavaScript file
+  using Babel.
+* [generator-gulp](generator-gulp): Sets up a standard Gulp environment for static site development.
+* [generator-parcel](generator-parcel): Sets up a standard Parcel environment for static site
+  development.
 
 If you'd like, you can run any of these generators independently. However, please be aware that some
 generators depend on others.
 
-``` sh
-npx -p yo -p https://github.com/LandonSchropp/generator-landon-schropp yo landon-schropp:<GENERATOR>
-```
-
 For example, to run the ESLint generator:
 
 ``` sh
-npx -p yo -p https://github.com/LandonSchropp/generator-landon-schropp yo landon-schropp:eslint
+npx -p @landonschropp/generator-eslint yo eslin3
 ```
 
 You can also see the documentation and options for each generator by including the `--help` flag.
 
 ``` sh
-npx \
-  -p yo \
-  -p https://github.com/LandonSchropp/generator-landon-schropp \
-  yo landon-schropp:<GENERATOR> --help
+npx -p @landonschropp/generator-eslint yo eslint --help
+```
+
+## Local Development
+
+While developing a generator, it's common to create an empty directory to run
+the generator in. This is easy with the following steps:
+
+First, if you haven't done so already, bootstrap the repo with Lerna. Then,
+switch into your generator's directory and link it.
+
+``` sh
+lerna bootstrap
+cd packages/<generator>
+yarn link
+```
+
+Next, initialize the Git repository in your empty folder and add `node_modules` to the `.gitignore`
+file.
+
+``` sh
+git init
+echo '/node_modules' > ~/.gitignore
+```
+
+Generate a `package.json` file and install `yo`.
+
+``` sh
+yarn init
+yarn add -D yo
+```
+
+Link your generator to the empty directory.
+
+``` sh
+yarn link @landonschropp/<generator>
+```
+
+Finally, you can run the `yo` command normally.
+
+``` sh
+yo @landonschropp/<generator>
 ```
 
 ## TODOs
