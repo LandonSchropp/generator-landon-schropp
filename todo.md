@@ -4,12 +4,11 @@
 - [x] Create a Babel generator.
 - [x] Create a Webpack generator.
 - [ ] Create a Jest generator.
-- [x] Create a composed static generator.
-- [ ] Create a composed Node.js generator.
+- [ ] Create a Parcel generator.
+- [ ] Create a Gulp generator.
 - [ ] Move `.gitignore` commands into individual generators.
-- [ ] Deploy the package to NPM.
+- [ ] Deploy the packages to NPM.
+- [ ] Set up automated deployments for packages with GitHub Actions.
 - [ ] Add detailed documentation on all of the generators.
 - [ ] Update documentation to use package instead of GitHub repository.
-- [ ] Add layouts to pages
 - [ ] Add readmes for individual packages
-- [ ] Figure out how to share dependencies for Lerna packages
