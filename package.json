@@ -19,7 +19,7 @@
   },
   "scripts": {
     "lint": "eslint --max-warnings=0 .",
-    "publish": "lerna publish --yes from-package",
+    "publish": "lerna publish --yes from-git",
     "version": "lerna version"
   },
   "version": "0.0.8"
