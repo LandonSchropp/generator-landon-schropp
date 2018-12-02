@@ -26,6 +26,6 @@ action "Publish" {
   needs = "Master"
   uses = "actions/npm@master"
   runs = "yarn"
-  args = "publish"
+  args = "publish-packages"
   secrets = ["NPM_AUTH_TOKEN"]
 }
