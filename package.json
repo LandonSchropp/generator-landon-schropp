@@ -18,7 +18,8 @@
     "lerna": "^3.4.3"
   },
   "scripts": {
-    "lint": "eslint --max-warnings=0 ."
+    "lint": "eslint --max-warnings=0 .",
+    "publish": "lerna publish --yes from-package"
   },
   "version": "0.0.4"
 }
