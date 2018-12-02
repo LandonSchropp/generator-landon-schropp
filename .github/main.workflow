@@ -4,13 +4,15 @@ workflow "Main" {
 }
 
 action "Build" {
-  uses = "./actions/yarn"
+  uses = "docker://node:10"
+  runs = "yarn"
   args = "install"
 }
 
 action "Lint" {
   needs = "Build"
-  uses = "./actions/yarn"
+  uses = "docker://node:10"
+  runs = "yarn"
   args = "lint"
 }
 
@@ -22,7 +24,8 @@ action "Master" {
 
 action "Publish" {
   needs = "Master"
-  uses = "./actions/yarn"
+  uses = "docker://node:10"
+  runs = "yarn"
   args = "publish-packages"
   secrets = ["NPM_AUTH_TOKEN"]
 }
