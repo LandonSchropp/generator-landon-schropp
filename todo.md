@@ -2,13 +2,12 @@
 - [x] Create a `package.json` generator.
 - [x] Create an ESLint generator.
 - [x] Create a Babel generator.
-- [x] Create a Webpack generator.
+- [ ] Create a Webpack generator.
 - [ ] Create a Jest generator.
 - [ ] Create a Parcel generator.
 - [ ] Create a Gulp generator.
 - [ ] Move `.gitignore` commands into individual generators.
-- [ ] Deploy the packages to NPM.
-- [ ] Set up automated deployments for packages with GitHub Actions.
-- [ ] Add detailed documentation on all of the generators.
-- [ ] Update documentation to use package instead of GitHub repository.
-- [ ] Add readmes for individual packages
+- [x] Deploy the packages to NPM.
+- [x] Set up automated deployments for packages with GitHub Actions.
+- [x] Add detailed documentation on all of the generators.
+- [x] Update documentation to use package instead of GitHub repository.
