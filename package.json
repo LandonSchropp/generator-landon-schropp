@@ -9,13 +9,13 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@landonschropp/eslint-config": "^0.4.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.6.0",
-    "lerna": "^3.4.3",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.3.0",
+    "lerna": "^3.16.4",
     "lerna-update-wizard": "^0.16.0"
   },
   "scripts": {
