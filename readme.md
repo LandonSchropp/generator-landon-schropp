@@ -39,6 +39,17 @@ generators depend on others.
 
 ## Local Development
 
+### Publishing
+
+To publish all of the packages, set the `NODE_AUTH_TOKEN` environment variable and then run the
+following command:
+
+``` sh
+yarn publish-packages
+```
+
+### Development Environment
+
 While developing a generator, it's common to create an empty directory to run the generator in. This
 is easy with the following steps:
 
