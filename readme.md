@@ -37,7 +37,7 @@ This project ships with several generators. If you'd like, these generators can 
 If you'd like, you can run any of these generators independently. However, please be aware that some
 generators depend on others.
 
-## Local Development
+## Development
 
 ### Publishing
 
@@ -48,46 +48,25 @@ following command:
 yarn publish-packages
 ```
 
-### Development Environment
+### Example Project
 
-While developing a generator, it's common to create an empty directory to run the generator in. This
-is easy with the following steps:
-
-First, if you haven't done so already, bootstrap the repo with Lerna. Then, switch into your
-generator's directory and link it.
+While developing a generator, it's common to create an empty directory to run the generator in.
+Because this is done so frequently, this repository includes a handy script that does this
+automatically.
 
 ``` sh
-lerna bootstrap
-cd packages/<generator>
-yarn link
+yarn set-up-example-project
 ```
 
-Next, initialize the Git repository in your empty folder and add `node_modules` to the `.gitignore`
-file.
+This script does a few things for you:
 
-``` sh
-git init
-echo '/node_modules' > ~/.gitignore
-```
+* It automatically calls `lerna boostrap` so you don't have to.
+* It creates a new `example` directory, sets it up as a Node package, and initializes a Git
+  repository so you can any changes your package may introduce.
+* It links all of the packages in the `packages` directory via Yarn.
 
-Generate a `package.json` file and install `yo`.
-
-``` sh
-yarn init
-yarn add -D yo
-```
-
-Link your generator to the empty directory.
-
-``` sh
-yarn link @landonschropp/<generator>
-```
-
-Finally, you can run the `yo` command normally.
-
-``` sh
-yo @landonschropp/<generator>
-```
+Once the script is done, all you need to do is change into the `example` directory and run
+`yo @landonschropp/<generator>` to test out one of the generators.
 
 ## TODOs
 

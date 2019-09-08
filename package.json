@@ -19,7 +19,7 @@
     "lerna-update-wizard": "^0.16.0"
   },
   "scripts": {
-    "link-packages": "./bin/link-packages",
+    "set-up-example-project": "./bin/set-up-example-project",
     "lint": "eslint --max-warnings=0 .",
     "package-versions": "lerna version",
     "publish-packages": "./bin/publish-packages",
