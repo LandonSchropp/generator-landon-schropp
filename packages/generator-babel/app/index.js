@@ -2,7 +2,7 @@ const Generator = require('yeoman-generator');
 
 module.exports = class BabelGenerator extends Generator {
 
-  // Override the default Yeoman installation any only use Yarn.
+  // Override the default Yeoman installation to only use Yarn.
   install() {
     this.yarnInstall([
       "@babel/cli",
