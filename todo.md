@@ -1,5 +1,6 @@
 - [x] Create a `.gitignore` generator.
 - [x] Create a `package.json` generator.
+- [ ] Fine a way to share code between generators (which may mean creating a new package).
 - [x] Create an ESLint generator.
 - [x] Create a Babel generator.
 - [ ] Create a Webpack generator.

@@ -1,7 +1,7 @@
 # Landon Schropp's Yeoman Generators
 
-This is an *opinionated* collection of Yeoman generators to make spinning up JavaScript projects
-easy and enjoyable.
+This is my personal, *opinionated* collection of Yeoman generators to make spinning up JavaScript
+projects easy and enjoyable.
 
 ## Quick Start
 
@@ -9,19 +9,19 @@ Run the generator of your choice with [NPX](https://github.com/zkat/npx). NPX al
 generator once without having to install anything. Answer the generator's prompts, and you're done!
 
 ``` sh
-npx @landonschropp/generator-<generator>
+npx -p yo -p @landonschropp/generator-<generator> yo @landonschropp/<generator>
 ```
 
 For example, to run the ESLint generator:
 
 ``` sh
-npx -p @landonschropp/generator-eslint yo @landonschropp/eslint
+npx -p yo -p @landonschropp/generator-eslint yo @landonschropp/eslint
 ```
 
 You can also see the documentation and options for each generator by including the `--help` flag.
 
 ``` sh
-npx -p @landonschropp/generator-eslint yo @landonschropp/eslint --help
+npx -p -p @landonschropp/generator-eslint yo @landonschropp/eslint --help
 ```
 
 ## The Generators
@@ -33,10 +33,6 @@ This project ships with several generators. If you'd like, these generators can 
   settings.
 * [webpack](packages/generator-webpack/readme.md): Configures Webpack to compile a source JavaScript
   file using Babel.
-* [gulp](packages/generator-gulp/readme.md): Sets up a standard Gulp environment for static site
-  development.
-* [parcel](packages/generator-parcel/readme.md): Sets up a standard Parcel environment for static
-  site development.
 
 If you'd like, you can run any of these generators independently. However, please be aware that some
 generators depend on others.
