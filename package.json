@@ -19,9 +19,10 @@
     "lerna-update-wizard": "^0.16.0"
   },
   "scripts": {
+    "link-packages": "./bin/link-packages",
     "lint": "eslint --max-warnings=0 .",
-    "publish-packages": "./bin/publish-packages",
     "package-versions": "lerna version",
+    "publish-packages": "./bin/publish-packages",
     "upgrade-dependencies": "lernaupdate"
   },
   "version": "0.1.1"

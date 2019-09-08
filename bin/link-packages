@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo
+
+BASE_DIRECTORY="$PWD"
+
+# Loop over all of the package folders.
+for PACKAGE_PATH in "$(dirname "$0")"/../packages/*/; do
+  cd "$(realpath "$BASE_DIRECTORY/$PACKAGE_PATH")"
+  yarn link
+  echo
+done
