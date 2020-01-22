@@ -7,6 +7,7 @@ module.exports = class BabelGenerator extends Generator {
     this.yarnInstall([
       "@babel/cli",
       "@babel/core",
+      "@babel/node",
       "@babel/preset-env",
       "@babel/register"
     ]);
