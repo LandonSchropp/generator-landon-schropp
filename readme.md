@@ -26,11 +26,11 @@ npx -p -p @landonschropp/generator-eslint yo @landonschropp/eslint --help
 
 ## The Generators
 
-This project ships with several generators. If you'd like, these generators can all
+This project ships with several generators.
 
-* [eslint](packages/generator-eslint/readme.md): Adds my personal ESLint configuration to a project.
 * [babel](packages/generator-babel/readme.md): Adds support for Babel along with my standard
   settings.
+* [eslint](packages/generator-eslint/readme.md): Adds my personal ESLint configuration to a project.
 * [webpack](packages/generator-webpack/readme.md): Configures Webpack to compile a source JavaScript
   file using Babel.
 
