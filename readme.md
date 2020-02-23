@@ -43,6 +43,13 @@ generators depend on others.
 
 ### Publishing
 
+Before you can publish your packages, you'll need to bump the package versions. The easiest way to
+do this is to use Lerna.
+
+``` sh
+lerna version
+```
+
 To publish all of the packages, set the `NPM_AUTH_TOKEN` environment variable and then run the
 following command:
 
