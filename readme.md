@@ -33,6 +33,8 @@ This project ships with several generators.
 * [eslint](packages/generator-eslint/readme.md): Adds my personal ESLint configuration to a project.
 * [webpack](packages/generator-webpack/readme.md): Configures Webpack to compile a source JavaScript
   file using Babel.
+* [language-server](packages/generator-language-server/readme.md): Configures a JavaScript language
+  server.
 
 If you'd like, you can run any of these generators independently. However, please be aware that some
 generators depend on others.
