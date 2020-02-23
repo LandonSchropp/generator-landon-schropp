@@ -43,7 +43,7 @@ generators depend on others.
 
 ### Publishing
 
-To publish all of the packages, set the `NODE_AUTH_TOKEN` environment variable and then run the
+To publish all of the packages, set the `NPM_AUTH_TOKEN` environment variable and then run the
 following command:
 
 ``` sh
