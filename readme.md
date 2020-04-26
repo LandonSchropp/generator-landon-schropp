@@ -49,7 +49,7 @@ to fix GitHub security alerts.
 To update all of the dependencies in all of the packages, run:
 
 ```
-lerna exec yarn upgrade
+yarn upgrade && lerna exec yarn upgrade
 ```
 
 ### Publishing
