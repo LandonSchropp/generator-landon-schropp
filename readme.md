@@ -41,6 +41,17 @@ generators depend on others.
 
 ## Development
 
+### Updating
+
+Occasionally, you'll run into a need to update all of your packages. This can happen when you need
+to fix GitHub security alerts.
+
+To update all of the dependencies in all of the packages, run:
+
+```
+lerna exec yarn upgrade
+```
+
 ### Publishing
 
 Before you can publish your packages, you'll need to bump the package versions. The easiest way to
