@@ -1,4 +1,4 @@
-# Landon Schropp's Yeoman Babel Generator
+# Landon Schropp's Yeoman ImportJS Generator
 
 This is my personal Yeoman ImportJS generator. For more information on this generator an my other
 generators, please see the [yeoman-generators](https://github.com/LandonSchropp/yeoman-generators)
@@ -12,5 +12,5 @@ necessary for setting up ImportJS.
 To use the generator, run the following command:
 
 ``` sh
-npx -p yo -p @landonschropp/generator-import-js yo @landonschropp/babel
+npx -p yo -p @landonschropp/generator-import-js yo @landonschropp/import-js
 ```
