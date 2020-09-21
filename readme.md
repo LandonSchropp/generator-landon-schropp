@@ -35,6 +35,7 @@ This project ships with several generators.
   file using Babel.
 * [language-server](packages/generator-language-server/readme.md): Configures a JavaScript language
   server.
+* [import-js](packages/generator-import-js/readme.md): Adds ImportJS to a project.
 
 If you'd like, you can run any of these generators independently. However, please be aware that some
 generators depend on others.
