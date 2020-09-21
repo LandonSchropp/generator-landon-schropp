@@ -23,7 +23,7 @@
     "lint": "eslint --max-warnings=0 .",
     "package-versions": "lerna version",
     "publish-packages": "./bin/publish-packages",
-    "upgrade-dependencies": "lernaupdate"
+    "upgrade-dependencies": "lerna exec -- yarn upgrade --latest && lernaupdate"
   },
   "version": "0.1.1"
 }
