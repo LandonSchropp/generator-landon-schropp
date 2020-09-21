@@ -3,7 +3,7 @@ const Generator = require('yeoman-generator');
 module.exports = class BabelGenerator extends Generator {
 
   install() {
-    this.yarnInstall([ "import-js" ]);
+    this.yarnInstall([ "import-js" ], { dev: true });
   }
 
   writing() {
