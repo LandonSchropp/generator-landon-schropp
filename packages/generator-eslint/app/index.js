@@ -37,5 +37,10 @@ module.exports = class ESLintGenerator extends Generator {
       this.destinationPath('package.json'),
       { scripts: { "lint": "eslint --max-warnings=0 ." } }
     );
+
+    this.spawnCommandSync('git', [
+      "git add .eslintrc.js .eslintignore",
+      "commit -m 'Add ESLint'"
+    ]);
   }
 };
