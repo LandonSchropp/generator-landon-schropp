@@ -11,5 +11,10 @@ module.exports = class BabelGenerator extends Generator {
       this.templatePath('.importjs.js'),
       this.destinationPath('.importjs.js')
     );
+
+    this.spawnCommandSync('git', [
+      "git add .importjs.js",
+      "commit -m 'Add ImportJS'"
+    ]);
   }
 };

@@ -11,5 +11,10 @@ module.exports = class LanguageServerGenerator extends Generator {
       this.templatePath("jsconfig.json"),
       this.destinationPath("jsconfig.json")
     );
+
+    this.spawnCommandSync('git', [
+      "git add jsconfig.json",
+      "commit -m 'Add TypeScript language server'"
+    ]);
   }
 };

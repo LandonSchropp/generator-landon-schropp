@@ -18,5 +18,11 @@ module.exports = class BabelGenerator extends Generator {
       this.templatePath('.babelrc'),
       this.destinationPath('.babelrc')
     );
+
+    this.spawnCommandSync('git', ["commit -m 'Add Babel'"]);
+    this.spawnCommandSync('git', [
+      "git add .babelrc",
+      "commit -m 'Add Babel'"
+    ]);
   }
 };
