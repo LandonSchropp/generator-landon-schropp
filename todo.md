@@ -1,14 +1,11 @@
 - [x] Create a `.gitignore` generator.
 - [x] Create a `package.json` generator.
-- [ ] Fine a way to share code between generators (which may mean creating a new package).
 - [x] Create an ESLint generator.
 - [x] Create a Babel generator.
-- [ ] Create a Webpack generator.
-- [ ] Create a Jest generator.
-- [ ] Create a Parcel generator.
-- [ ] Create a Gulp generator.
-- [ ] Move `.gitignore` commands into individual generators.
 - [x] Deploy the packages to NPM.
 - [x] Set up automated deployments for packages with GitHub Actions.
 - [x] Add detailed documentation on all of the generators.
 - [x] Update documentation to use package instead of GitHub repository.
+- [ ] Create a Jest generator.
+- [ ] Create a Node.js generator.
+- [ ] Move `.gitignore` commands into individual generators.
