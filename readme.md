@@ -3,6 +3,17 @@
 This is my personal, *opinionated* collection of Yeoman generators to make spinning up JavaScript
 projects easy and enjoyable.
 
+## TL/DR
+
+``` bash
+npx -p yo -p @landonschropp/generator-eslint yo @landonschropp/eslint --help
+npx -p yo -p @landonschropp/generator-babel yo @landonschropp/babel
+npx -p yo -p @landonschropp/generator-eslint yo @landonschropp/eslint
+npx -p yo -p @landonschropp/generator-import-js yo @landonschropp/import-js
+npx -p yo -p @landonschropp/generator-language-server yo @landonschropp/language-server
+npx -p yo -p @landonschropp/generator-webpack yo @landonschropp/webpack
+```
+
 ## Quick Start
 
 Run the generator of your choice with [NPX](https://github.com/zkat/npx). NPX allows you to run the
@@ -10,12 +21,6 @@ generator once without having to install anything. Answer the generator's prompt
 
 ``` sh
 npx -p yo -p @landonschropp/generator-<generator> yo @landonschropp/<generator>
-```
-
-For example, to run the ESLint generator:
-
-``` sh
-npx -p yo -p @landonschropp/generator-eslint yo @landonschropp/eslint
 ```
 
 You can also see the documentation and options for each generator by including the `--help` flag.
