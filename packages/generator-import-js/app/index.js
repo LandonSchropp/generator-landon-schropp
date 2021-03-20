@@ -1,4 +1,4 @@
-const Generator = require('yeoman-generator');
+const Generator = require("yeoman-generator");
 
 module.exports = class BabelGenerator extends Generator {
 
@@ -8,11 +8,11 @@ module.exports = class BabelGenerator extends Generator {
 
   writing() {
     this.fs.copy(
-      this.templatePath('.importjs.js'),
-      this.destinationPath('.importjs.js')
+      this.templatePath(".importjs.js"),
+      this.destinationPath(".importjs.js")
     );
 
-    this.spawnCommandSync('git', [
+    this.spawnCommandSync("git", [
       "git add .importjs.js",
       "commit -m 'Add ImportJS'"
     ]);

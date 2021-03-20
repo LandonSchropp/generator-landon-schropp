@@ -1,4 +1,4 @@
-const Generator = require('yeoman-generator');
+const Generator = require("yeoman-generator");
 
 module.exports = class WebpackGenerator extends Generator {
 
@@ -8,11 +8,11 @@ module.exports = class WebpackGenerator extends Generator {
   }
 
   writing() {
-    this.fs.write(this.destinationPath('source/javascript/index.js'), '');
+    this.fs.write(this.destinationPath("source/javascript/index.js"), "");
 
     this.fs.copy(
-      this.templatePath('webpack.config.babel.js'),
-      this.destinationPath('webpack.config.babel.js')
+      this.templatePath("webpack.config.babel.js"),
+      this.destinationPath("webpack.config.babel.js")
     );
   }
 };

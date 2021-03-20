@@ -1,12 +1,12 @@
-const Generator = require('yeoman-generator');
+const Generator = require("yeoman-generator");
 
 module.exports = class ESLintGenerator extends Generator {
 
   constructor(args, opts) {
     super(args, opts);
 
-    this.option('browser', {
-      desc: 'Generats browser ESLint configuration',
+    this.option("browser", {
+      desc: "Generats browser ESLint configuration",
       type: Boolean,
       default: false
     });
@@ -23,22 +23,22 @@ module.exports = class ESLintGenerator extends Generator {
 
   writing() {
     this.fs.copyTpl(
-      this.templatePath('eslintrc.js.ejs'),
-      this.destinationPath('.eslintrc.js'),
+      this.templatePath("eslintrc.js.ejs"),
+      this.destinationPath(".eslintrc.js"),
       this.options
     );
 
     this.fs.copy(
-      this.templatePath('eslintignore'),
-      this.destinationPath('.eslintignore')
+      this.templatePath("eslintignore"),
+      this.destinationPath(".eslintignore")
     );
 
     this.fs.extendJSON(
-      this.destinationPath('package.json'),
+      this.destinationPath("package.json"),
       { scripts: { "lint": "eslint --max-warnings=0 ." } }
     );
 
-    this.spawnCommandSync('git', [
+    this.spawnCommandSync("git", [
       "git add .eslintrc.js .eslintignore",
       "commit -m 'Add ESLint'"
     ]);

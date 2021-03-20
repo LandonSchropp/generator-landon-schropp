@@ -1,4 +1,4 @@
-const Generator = require('yeoman-generator');
+const Generator = require("yeoman-generator");
 
 module.exports = class LanguageServerGenerator extends Generator {
 
@@ -12,7 +12,7 @@ module.exports = class LanguageServerGenerator extends Generator {
       this.destinationPath("jsconfig.json")
     );
 
-    this.spawnCommandSync('git', [
+    this.spawnCommandSync("git", [
       "git add jsconfig.json",
       "commit -m 'Add TypeScript language server'"
     ]);
