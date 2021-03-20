@@ -18,14 +18,11 @@
     "@landonschropp/eslint-config": "^0.8.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.22.0",
-    "lerna": "^3.20.2"
+    "lerna": "^4.0.0"
   },
   "scripts": {
     "set-up-example-project": "./bin/set-up-example-project",
-    "lint": "eslint --max-warnings=0 .",
-    "package-versions": "lerna version",
-    "publish-packages": "./bin/publish-packages",
-    "upgrade-dependencies": "lerna exec -- yarn upgrade --latest && lernaupdate"
+    "lint": "eslint --max-warnings=0 ."
   },
   "version": "0.1.1"
 }
