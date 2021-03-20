@@ -4,7 +4,10 @@
   "repository": "http://github.com/LandonSchropp/yeoman-generators",
   "author": "Landon Schropp <schroppl@gmail.com>",
   "license": "MIT",
-  "private": false,
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "keywords": [
     "yeoman-generator"
   ],
