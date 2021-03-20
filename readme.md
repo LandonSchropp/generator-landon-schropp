@@ -44,29 +44,19 @@ generators depend on others.
 
 ### Updating
 
-Occasionally, you'll run into a need to update all of your packages. This can happen when you need
-to fix GitHub security alerts.
-
-To update all of the dependencies in all of the packages, run:
+This repo uses Yarn workspaces, so updating all of the packages is easy.
 
 ```
-yarn upgrade && lerna exec yarn upgrade
+yarn upgrade-interactive --latest
 ```
 
 ### Publishing
 
-Before you can publish your packages, you'll need to bump the package versions. The easiest way to
-do this is to use Lerna.
+Publishing all of the packages is also a breeze thanks to Lerna. First, make sure the
+`NPM_TOKEN` environment variable is set. Then, all you need to do is run the following command.
 
 ``` sh
-lerna version
-```
-
-To publish all of the packages, set the `NPM_AUTH_TOKEN` environment variable and then run the
-following command:
-
-``` sh
-yarn publish-packages
+lerna publish
 ```
 
 ### Example Project
@@ -81,14 +71,10 @@ yarn set-up-example-project
 
 This script does a few things for you:
 
-* It automatically calls `lerna boostrap` so you don't have to.
+* It automatically runs `yarn install` so you don't have to.
 * It creates a new `example` directory, sets it up as a Node package, and initializes a Git
   repository so you can any changes your package may introduce.
 * It links all of the packages in the `packages` directory via Yarn.
 
 Once the script is done, all you need to do is change into the `example` directory and run
 `yo @landonschropp/<generator>` to test out one of the generators.
-
-## TODOs
-
-See the [todo](/todo.md) document for more information on what still needs to be done.
