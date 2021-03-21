@@ -3,7 +3,7 @@ const Generator = require("yeoman-generator");
 module.exports = class BabelGenerator extends Generator {
 
   install() {
-    this.yarnInstall([ "import-js" ], { dev: true });
+    this.addDevDependencies([ "import-js" ]);
   }
 
   writing() {
@@ -11,10 +11,10 @@ module.exports = class BabelGenerator extends Generator {
       this.templatePath(".importjs.js"),
       this.destinationPath(".importjs.js")
     );
+  }
 
-    this.spawnCommandSync("git", [
-      "git add .importjs.js",
-      "commit -m 'Add ImportJS'"
-    ]);
+  end() {
+    this.spawnCommandSync("git", [ "add", ".importjs.js" ]);
+    this.spawnCommandSync("git", [ "commit", "-m", "Add ImportJS" ]);
   }
 };
