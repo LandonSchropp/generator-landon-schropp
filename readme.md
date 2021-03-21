@@ -14,7 +14,16 @@ npx -p yo@next-4 -p @landonschropp/generator-import-js yo @landonschropp/import-
 npx -p yo@next-4 -p @landonschropp/generator-language-server yo @landonschropp/language-server
 ```
 
-## Quick Start
+## The Generators
+
+This project includes several generators.
+
+* [babel](packages/generator-babel/readme.md): Sets up Babel and optionally installs a few useful
+  plugins I use often.
+* [eslint](packages/generator-eslint/readme.md): Adds my personal ESLint configuration to a project.
+* [language-server](packages/generator-language-server/readme.md): Configures a JavaScript language
+  server.
+* [import-js](packages/generator-import-js/readme.md): Adds ImportJS to a project.
 
 Run the generator of your choice with [NPX](https://github.com/zkat/npx). NPX allows you to run the
 generator once without having to install anything. Answer the generator's prompts, and you're done!
@@ -29,19 +38,8 @@ You can also see the documentation and options for each generator by including t
 npx -p yo@next-4 -p @landonschropp/generator-eslint yo @landonschropp/eslint --help
 ```
 
-## The Generators
-
-This project ships with several generators.
-
-* [babel](packages/generator-babel/readme.md): Adds support for Babel along with my standard
-  settings.
-* [eslint](packages/generator-eslint/readme.md): Adds my personal ESLint configuration to a project.
-* [language-server](packages/generator-language-server/readme.md): Configures a JavaScript language
-  server.
-* [import-js](packages/generator-import-js/readme.md): Adds ImportJS to a project.
-
-If you'd like, you can run any of these generators independently. However, please be aware that some
-generators depend on others.
+You can run any of these generators independently. However, please be aware that some
+generators have dependencies. For example, the ESLint generator requires Babel to be installed.
 
 ## Development
 
