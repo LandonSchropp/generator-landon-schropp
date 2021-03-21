@@ -24,8 +24,10 @@ mkdir -p "$BASE_DIRECTORY/example"
 cd "$BASE_DIRECTORY/example"
 
 # Link all of the packages
+# TODO: Remove the yo beta version when the full version 4 is released.
+# https://github.com/yeoman/generator/issues/1279
 yarn init -y
-yarn add -D yo
+yarn add -D yo@next-4
 echo
 
 # Set up the project as a Git repo
