@@ -2,30 +2,30 @@ const Generator = require("yeoman-generator");
 
 module.exports = class ESLintGenerator extends Generator {
 
-  constructor(args, opts) {
-    super(args, opts);
-
-    this.option("browser", {
-      desc: "Generats browser ESLint configuration",
-      type: Boolean,
-      default: false
-    });
+  async prompting() {
+    Object.assign(this, await this.prompt([
+      {
+        type: "confirm",
+        name: "browser",
+        message: "Is this a browser project?"
+      }
+    ]));
   }
 
   // Override the default Yeoman installation any only use Yarn.
   install() {
-    this.yarnInstall([
+    this.addDevDependencies([
       "eslint",
       "eslint-config-optimum-energy",
       "babel-eslint"
-    ], { dev: true });
+    ]);
   }
 
   writing() {
     this.fs.copyTpl(
       this.templatePath("eslintrc.js.ejs"),
       this.destinationPath(".eslintrc.js"),
-      this.options
+      this
     );
 
     this.fs.copy(
@@ -37,10 +37,10 @@ module.exports = class ESLintGenerator extends Generator {
       this.destinationPath("package.json"),
       { scripts: { "lint": "eslint --max-warnings=0 ." } }
     );
+  }
 
-    this.spawnCommandSync("git", [
-      "git add .eslintrc.js .eslintignore",
-      "commit -m 'Add ESLint'"
-    ]);
+  end() {
+    this.spawnCommandSync("git", [ "add", ".eslintrc.js", ".eslintignore", "package.json" ]);
+    this.spawnCommandSync("git", [ "commit", "-m", "Add ESLint" ]);
   }
 };
