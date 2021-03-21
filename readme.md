@@ -8,7 +8,6 @@ projects easy and enjoyable.
 **BUG FIX: Right now the main release of `yo` is broken. To fix it, use `yo@next-4` instead.**
 
 ``` bash
-npx -p yo@next-4 -p @landonschropp/generator-eslint yo @landonschropp/eslint --help
 npx -p yo@next-4 -p @landonschropp/generator-babel yo @landonschropp/babel
 npx -p yo@next-4 -p @landonschropp/generator-eslint yo @landonschropp/eslint
 npx -p yo@next-4 -p @landonschropp/generator-import-js yo @landonschropp/import-js
