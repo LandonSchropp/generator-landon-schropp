@@ -8,17 +8,29 @@ module.exports = class ESLintGenerator extends Generator {
         type: "confirm",
         name: "browser",
         message: "Is this a browser project?"
+      },
+      {
+        type: "confirm",
+        name: "react",
+        message: "Is this a React project?"
       }
     ]));
   }
 
-  // Override the default Yeoman installation any only use Yarn.
   install() {
     this.addDevDependencies([
       "eslint",
-      "eslint-config-optimum-energy",
-      "babel-eslint"
+      "@landonschropp/eslint-config",
+      "@babel/eslint-parser"
     ]);
+
+    if (this.react) {
+      this.addDevDependencies([
+        "@babel/eslint-parser",
+        "eslint-plugin-react",
+        "eslint-plugin-react-hooks"
+      ]);
+    }
   }
 
   writing() {

@@ -1,12 +1,9 @@
 module.exports = {
-  parser: "babel-eslint",
-  extends: "optimum-energy",
+  parser: "@babel/eslint-parser",
+  extends: [ "@landonschropp"<%- react ? ', "@landonschropp/react"' : '' %> ],
   env: {
     es6: true,
     <%= browser ? 'browser' : 'node' %>: true,
     jest: true
-  },
-  parserOptions: {
-    sourceType: "module"
   }
 };
