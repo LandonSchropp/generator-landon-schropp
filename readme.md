@@ -13,7 +13,6 @@ npx -p yo@next-4 -p @landonschropp/generator-babel yo @landonschropp/babel
 npx -p yo@next-4 -p @landonschropp/generator-eslint yo @landonschropp/eslint
 npx -p yo@next-4 -p @landonschropp/generator-import-js yo @landonschropp/import-js
 npx -p yo@next-4 -p @landonschropp/generator-language-server yo @landonschropp/language-server
-npx -p yo@next-4 -p @landonschropp/generator-webpack yo @landonschropp/webpack
 ```
 
 ## Quick Start
@@ -38,8 +37,6 @@ This project ships with several generators.
 * [babel](packages/generator-babel/readme.md): Adds support for Babel along with my standard
   settings.
 * [eslint](packages/generator-eslint/readme.md): Adds my personal ESLint configuration to a project.
-* [webpack](packages/generator-webpack/readme.md): Configures Webpack to compile a source JavaScript
-  file using Babel.
 * [language-server](packages/generator-language-server/readme.md): Configures a JavaScript language
   server.
 * [import-js](packages/generator-import-js/readme.md): Adds ImportJS to a project.
