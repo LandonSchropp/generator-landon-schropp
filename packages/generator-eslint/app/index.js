@@ -15,6 +15,8 @@ module.exports = class ESLintGenerator extends Generator {
         message: "Is this a React project?"
       }
     ]));
+
+    console.log(this);
   }
 
   install() {

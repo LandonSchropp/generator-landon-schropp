@@ -1,28 +1,85 @@
+const _ = require("lodash");
 const Generator = require("yeoman-generator");
+
+const PIPELINE_PLUGIN = [ "@babel/plugin-proposal-pipeline-operator", { "proposal": "smart" } ];
+const DECORATORS_PLUGIN = [ "@babel/plugin-proposal-decorators", { "legacy": true } ];
+const CLASS_PROPERITES_PLUGIN = [ "@babel/plugin-proposal-class-properties", { "loose": false } ];
 
 module.exports = class BabelGenerator extends Generator {
 
-  // Override the default Yeoman installation to only use Yarn.
+  async prompting() {
+    Object.assign(this, await this.prompt([
+      {
+        type: "confirm",
+        name: "react",
+        message: "Is this a React project?"
+      },
+      {
+        type: "checkbox",
+        name: "plugins",
+        message: "Which plugins would you link to install?",
+        choices: [
+          {
+            name: "Pipeline Operator",
+            value: "pipeline"
+          },
+          {
+            name: "Decorators",
+            value: "decorators"
+          },
+          {
+            name: "Class Properties",
+            value: "classProperties"
+          }
+        ]
+      }
+    ]));
+  }
+
   install() {
-    this.yarnInstall([
+    this.addDependencies([
       "@babel/cli",
       "@babel/core",
       "@babel/node",
       "@babel/preset-env",
       "@babel/register"
     ]);
+
+    if (this.react) {
+      this.addDependencies([ "babel-preset-react-app" ]);
+    }
+
+    if (_.includes(this.plugins, "pipeline")) {
+      this.addDependencies([ "@babel/plugin-proposal-pipeline-operator" ]);
+    }
+
+    if (_.includes(this.plugins, "decorators")) {
+      this.addDependencies([ "@babel/plugin-proposal-decorators" ]);
+    }
+
+    if (_.includes(this.plugins, "classProperties")) {
+      this.addDependencies([ "@babel/plugin-proposal-class-properties" ]);
+    }
   }
 
   writing() {
-    this.fs.copy(
-      this.templatePath(".babelrc"),
-      this.destinationPath(".babelrc")
-    );
+    let babelConfiguration = {
+      "presets": [ this.react ? "babel-preset-react-app" : "@babel/preset-env" ],
+      "plugins": _.reject([
+        _.includes(this.plugins, "pipeline") ? PIPELINE_PLUGIN : null,
+        _.includes(this.plugins, "decorators") ? DECORATORS_PLUGIN : null,
+        _.includes(this.plugins, "classProperties") ? CLASS_PROPERITES_PLUGIN : null
+      ], _.isNil)
+    };
 
-    this.spawnCommandSync("git", [ "commit -m 'Add Babel'" ]);
-    this.spawnCommandSync("git", [
-      "git add .babelrc",
-      "commit -m 'Add Babel'"
-    ]);
+    this.fs.writeJSON(
+      this.destinationPath(".babelrc"),
+      babelConfiguration
+    );
+  }
+
+  end() {
+    this.spawnCommandSync("git", [ "add", ".babelrc" ]);
+    this.spawnCommandSync("git", [ "commit", "-m", "Add Babel" ]);
   }
 };
