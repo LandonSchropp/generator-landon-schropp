@@ -15,19 +15,17 @@ module.exports = class ESLintGenerator extends Generator {
         message: "Is this a React project?"
       }
     ]));
-
-    console.log(this);
   }
 
-  install() {
-    this.addDevDependencies([
+  async install() {
+    await this.addDevDependencies([
       "eslint",
       "@landonschropp/eslint-config",
       "@babel/eslint-parser"
     ]);
 
     if (this.react) {
-      this.addDevDependencies([
+      await this.addDevDependencies([
         "@babel/eslint-parser",
         "eslint-plugin-react",
         "eslint-plugin-react-hooks"
@@ -54,7 +52,14 @@ module.exports = class ESLintGenerator extends Generator {
   }
 
   end() {
-    this.spawnCommandSync("git", [ "add", ".eslintrc.js", ".eslintignore", "package.json" ]);
+    this.spawnCommandSync("git", [
+      "add",
+      ".eslintrc.js",
+      ".eslintignore",
+      "package.json",
+      "yarn.lock"
+    ]);
+
     this.spawnCommandSync("git", [ "commit", "-m", "Add ESLint" ]);
   }
 };

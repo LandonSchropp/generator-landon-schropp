@@ -36,8 +36,8 @@ module.exports = class BabelGenerator extends Generator {
     ]));
   }
 
-  install() {
-    this.addDependencies([
+  async install() {
+    await this.addDependencies([
       "@babel/cli",
       "@babel/core",
       "@babel/node",
@@ -46,19 +46,19 @@ module.exports = class BabelGenerator extends Generator {
     ]);
 
     if (this.react) {
-      this.addDependencies([ "babel-preset-react-app" ]);
+      await this.addDependencies([ "babel-preset-react-app" ]);
     }
 
     if (_.includes(this.plugins, "pipeline")) {
-      this.addDependencies([ "@babel/plugin-proposal-pipeline-operator" ]);
+      await this.addDependencies([ "@babel/plugin-proposal-pipeline-operator" ]);
     }
 
     if (_.includes(this.plugins, "decorators")) {
-      this.addDependencies([ "@babel/plugin-proposal-decorators" ]);
+      await this.addDependencies([ "@babel/plugin-proposal-decorators" ]);
     }
 
     if (_.includes(this.plugins, "classProperties")) {
-      this.addDependencies([ "@babel/plugin-proposal-class-properties" ]);
+      await this.addDependencies([ "@babel/plugin-proposal-class-properties" ]);
     }
   }
 
@@ -79,7 +79,7 @@ module.exports = class BabelGenerator extends Generator {
   }
 
   end() {
-    this.spawnCommandSync("git", [ "add", ".babelrc" ]);
+    this.spawnCommandSync("git", [ "add", ".babelrc", "package.json", "yarn.lock" ]);
     this.spawnCommandSync("git", [ "commit", "-m", "Add Babel" ]);
   }
 };
